@@ -24,6 +24,18 @@ h1 {
     font-family: 'Montserrat', sans-serif;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid #333;
+}
+
+td, th {
+    padding: 5px;
+}
+
 .header-nav {
     position: fixed;
     top: 0;
@@ -114,7 +126,7 @@ h1 {
 }
 
 main.body-content {
-    padding-top: 54px;
+    padding: 54px 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;

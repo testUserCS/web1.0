@@ -1,0 +1,133 @@
+body, html {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000000;
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.navigation {
+    list-style: none;
+    margin: 0; 
+    display: flex;
+    /* float to right side of screen */
+    justify-content: flex-end;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    transition: background-color .33s ease-in-out;
+}
+
+.navigation a:hover {
+    background-color: lightblue;
+}
+
+@media all and (max-width: 800px) {
+    .navigation {
+        /* on smaller screens, fill available space */
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 600px) {
+    /* on smallest screen, switch to vertical positioning of elements */
+    .navigation {
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .navigation a { 
+        text-align: center; 
+        padding: 10px;
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-bg:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background: url(/img/background.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+}
+
+.hero-bg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+#description {
+    width: 50%;
+    text-align: center;
+}
+
+@media all and (max-width: 800px) {
+    #description {
+        width: 70%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    #description {
+        width: 100%;
+    }
+}
